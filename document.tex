@@ -1,9 +1,9 @@
 % Credits to https://tex.stackexchange.com/questions/8827/preparing-cheat-sheets
-\documentclass[10pt,landscape]{article}
+\documentclass[10pt]{article}
 \usepackage{multicol}
 \usepackage{calc}
 \usepackage{ifthen}
-\usepackage[landscape]{geometry}
+\usepackage[portrait]{geometry}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
@@ -57,14 +57,16 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus 0.5ex}
 
-%My Environments
-\newtheorem{example}[section]{Example}
+% My Environments
+% Tab alike command
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
 % -----------------------------------------------------------------------
 
 \begin{document}
 \raggedright
 \footnotesize
-\begin{multicols}{3}
+\begin{multicols}{2}
 
 
 % multicol parameters
@@ -76,30 +78,41 @@
 \setlength{\columnsep}{2pt}
 
 \begin{center}
-     \Large{\underline{Title}} \\
+     \Large{\underline{Swedish Grammar}} \\
 \end{center}
 
-\section{Section 1}
-Text
-\subsection{xCode}
-Subsetction text
+% Some Swedish characters
+% å  => \aa
+% Å => \AA
+% ä  => \"a
+% Ä => \"A
+% ö  => \"o
 
-\section{Section 2}
-Text 2
+\section{Nouns}
+	[Common]\textbf{En} pojke\newline
+	[Neuter]\textbf{Ett} \"apple\newline
+	\par
+	[Morpheme order]\underline{Noun stem}(plural)(definite)(genitive -s)
+\subsection{Plurals}
+\subsubsection{[Indefinite]Plurals}
+	Five declensions -or, -ar, -(e)r, -n, -\newline
+	1. [Common]En flick\textbf{a}, flera flick\textbf{or}\newline
+	2. [Common]En hund, flera hund\textbf{ar}\newline
+	3. En bok, flera b\"ok\textbf{er}\newline
+	4. [Neuter, end in vowel]Ett \"apple, flera \"apple\textbf{n}\newline
+	5. Ett djur, flera djur\newline
+	\par
+	\emph{Some exceptions exist!}
+\subsubsection{[Definite]Plurals}
+	Five declensions -or, -ar, -(e)r, -n, -\newline
+	1. Flaska\textbf{n}, flask\textbf{orna}\newline
+	2. [Common]Stol\textbf{en}, stol\textbf{arna}\newline
+	3. [Mostly common]Sak\textbf{en}, sak\textbf{erna}\newline
+	4. [Neuter, ends in vowl]Hj\"arta\textbf{t}, hj\"arta\textbf{na}\newline
+	5. [Mostly neuter]Horn\textbf{et}, horn\textbf{en}
+\section{Pronouns}
 
-\section{Section 3}
-Etc.
 
-% You can even have references
-\rule{0.3\linewidth}{0.25pt}
-\scriptsize
-\bibliographystyle{abstract}
-\bibliography{refFile}
+
 \end{multicols}
 \end{document}
-I hope you'd find it useful.
-
-shareimprove this answer
-edited Jul 13 '17 at 8:56
-
-David Carlisle
