@@ -1,0 +1,4 @@
+# Ignore scons generated files
+.sconsign.dblite
+
+
